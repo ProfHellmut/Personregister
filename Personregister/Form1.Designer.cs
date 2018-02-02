@@ -34,9 +34,9 @@
             this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avslutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             this.lbPersonLista.Name = "lbPersonLista";
             this.lbPersonLista.Size = new System.Drawing.Size(408, 292);
             this.lbPersonLista.TabIndex = 0;
+            this.lbPersonLista.DoubleClick += new System.EventHandler(this.lbPersonLista_DoubleClick);
             // 
             // menuStrip1
             // 
@@ -73,14 +74,14 @@
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
-            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.sparaToolStripMenuItem.Text = "Spara";
             this.sparaToolStripMenuItem.Click += new System.EventHandler(this.sparaToolStripMenuItem_Click);
             // 
             // avslutaToolStripMenuItem
             // 
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
-            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.avslutaToolStripMenuItem.Text = "Avsluta";
             // 
             // groupBox1
@@ -95,15 +96,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funktioner";
             // 
-            // btnAdd
+            // btnRemove
             // 
-            this.btnAdd.Location = new System.Drawing.Point(6, 44);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(105, 37);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Lägg till";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnRemove.Location = new System.Drawing.Point(6, 130);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(105, 37);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "Ta bort";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnEdit
             // 
@@ -115,15 +116,15 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnRemove
+            // btnAdd
             // 
-            this.btnRemove.Location = new System.Drawing.Point(6, 130);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(105, 37);
-            this.btnRemove.TabIndex = 2;
-            this.btnRemove.Text = "Ta bort";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnAdd.Location = new System.Drawing.Point(6, 44);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(105, 37);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Lägg till";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Form1
             // 

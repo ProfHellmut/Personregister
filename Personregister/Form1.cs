@@ -47,18 +47,42 @@ namespace Personregister
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            Person p = register.GetPerson(lbPersonLista.SelectedIndex);
+            EditPerson ep = new EditPerson(p);
 
+            ep.ShowDialog();
+
+            UpdateList();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            Person p = register.GetPerson(lbPersonLista.SelectedIndex);
+            DialogResult r = MessageBox.Show($"Remove {p.Name}?", "Remove", 
+                                            MessageBoxButtons.YesNo, 
+                                            MessageBoxIcon.Warning);
 
+            if (r == DialogResult.Yes)
+                register.RemovePerson(p.Pnr);
+
+            UpdateList();
         }
 
         private void sparaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveLoad sl = new SaveLoad();
             sl.SaveToFile(register);
+        }
+
+        private void lbPersonLista_DoubleClick(object sender, EventArgs e)
+        {
+            if (lbPersonLista.SelectedIndex >= 0 )
+            {
+                Person p = register.GetPerson(lbPersonLista.SelectedIndex);
+                PersonViewer pv = new PersonViewer(p);
+                pv.ShowDialog();
+            }
+
         }
     }
 }

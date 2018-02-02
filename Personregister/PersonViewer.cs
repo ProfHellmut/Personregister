@@ -10,30 +10,32 @@ using System.Windows.Forms;
 
 namespace Personregister
 {
-    public partial class EditPerson : Form
+    public partial class PersonViewer : Form
     {
-        Person person;
-        public EditPerson(Person person)
+        public PersonViewer(Person person)
         {
             InitializeComponent();
-            this.person = person;
-
-            InitailizeTextFields();
+            InitailizeText(person);
+            DisableTextFields();
+            
         }
 
-        void InitailizeTextFields()
+        void InitailizeText(Person person)
         {
-            txtName.Text = person.Name;
+            lblName.Text = person.Name;
             txtPnr.Text = person.Pnr.ToString();
             txtProfession.Text = person.Profession;
-
-            txtPnr.Enabled = false;
         }
 
-        private void btnAccept_Click(object sender, EventArgs e)
+        void DisableTextFields()
         {
-            person.Name = txtName.Text;
-            person.Profession = txtProfession.Text;
+            txtPnr.Enabled = false;
+            txtProfession.Enabled = false;
+        }
+
+        private void PersonViewer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

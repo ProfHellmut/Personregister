@@ -61,5 +61,10 @@ namespace Personregister
         {
             return personList;
         }
+
+        public Person GetPerson(int index)
+        {
+            return personList[index];
+        }
     }
 }

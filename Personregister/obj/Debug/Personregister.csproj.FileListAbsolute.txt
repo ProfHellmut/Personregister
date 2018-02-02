@@ -9,3 +9,5 @@ c:\users\elev\documents\visual studio 2017\Projects\Personregister\Personregiste
 c:\users\elev\documents\visual studio 2017\Projects\Personregister\Personregister\obj\Debug\Personregister.exe
 c:\users\elev\documents\visual studio 2017\Projects\Personregister\Personregister\obj\Debug\Personregister.pdb
 c:\users\elev\documents\visual studio 2017\Projects\Personregister\Personregister\obj\Debug\Personregister.AddPerson.resources
+C:\Users\elev\documents\visual studio 2017\Projects\Personregister\Personregister\obj\Debug\Personregister.EditPerson.resources
+C:\Users\elev\documents\visual studio 2017\Projects\Personregister\Personregister\obj\Debug\Personregister.PersonViewer.resources
